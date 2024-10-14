@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC Video Conference</title>
+    <link rel="icon" type="image/x-icon" href="../public/image-assets/logo-favicon.png">
+    <link rel="stylesheet" href="../public/css/style-room.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div id="form" class="glow">
+            <div id="content">
+                <div id="left-content">
+                    <div class="top-left">
+                        <div class="logo">
+                            <img src="../public/image-assets/logo.png" style="height: 35px; margin-top: 12px;">
+                        </div><!--End of logo-->
+                        <div class="header">
+                            <p style="margin: 0px; padding: 12px 0px 0px 10px; font-weight: bold;">
+                              A WebRTC Video Conference App
+                            </p>
+                            <p id="date" style="margin: 0px; padding: 0px 0px 0px 10px; font-size: 10pt;">
+                              Sunday, 1 Jan 2023
+                            </p>
+                            <span id="power" onclick="leaveMeeting()">
+                              <i class="material-icons">&#xe8ac;</i>
+                            </span>
+                          </div>
+                          <!-- End of header -->
+                    </div><!--End of top left-->
+                    <div class="middle-left">
+                        <img src="../public/image-assets/user-large.png" id="main-video">
+                        <div id="video-grid">
+                          <div>
+                            <img src="../public/image-assets/user-mini-1.png" class="vid">
+                            <div class="label-mini-vid">Muslima</div>
+                          </div>
+                          <div>
+                            <img src="../public/image-assets/user-mini-2.png" class="vid">
+                            <div class="label-mini-vid">Abraham</div>
+                          </div>
+                          <div>
+                            <img src="../public/image-assets/user-mini-3.png" class="vid">
+                            <div class="label-mini-vid">Andrew</div>
+                          </div>
+                        </div><!--End of video grid-->
+                      </div><!--End of middle left-->
+                </div><!--End of left content-->
+                <div id="right-content">
+
+                </div><!--End of right content-->
+            </div><!--End of content-->
+        </div><!--End of form-->
+    </div><!--End of container-->
+    
+</body>
+
+</html>
