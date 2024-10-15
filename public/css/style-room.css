@@ -115,3 +115,48 @@ html {
     color: #fff;
     margin-top: 5px;
 }
+
+#bot-left {
+    width: 686px;
+    height: 65px;
+    background-color: #d8e5f2;
+    margin: 10px 0px 0px 0px;
+    float: left;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid #ffffff;
+}
+
+.command-btn {
+    width: 45px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 7px;
+    padding: 5px;
+    display: inline-block;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 10pt;
+    box-shadow: 20px 20px 22px rgba(0, 0, 0, 0.2);
+}
+
+.label {
+    margin-top: 3px;
+}
+
+.command-btn:hover, .label:hover, .btn-active {
+    color: #fd6f13;
+}
+
+.active {
+    width: 10px;
+    height: 10px;
+    background-color: #06c881;
+    border-radius: 10px;
+    border: 3px solid white;
+    position: relative;
+    left: 260px;
+    bottom: 32px;
+}
