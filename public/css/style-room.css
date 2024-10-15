@@ -160,3 +160,14 @@ html {
     left: 260px;
     bottom: 32px;
 }
+
+#right-content {
+    width: 296px;
+    height: 565px;
+    margin: 20px 20px 20px 0px;
+    float: left;
+    background-color: #d8e5f2;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #ffffff;
+}
