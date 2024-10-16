@@ -171,3 +171,98 @@ html {
     background-color: rgba(255, 255, 255, 0.2);
     border: 2px solid #ffffff;
 }
+#info {
+    width: 270px;
+    height: 100px;
+    background-color: #fd6f13;
+    margin-left: 11px;
+    margin-top: -10px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+#chatroom {
+    width: 280px;
+    height: 285px;
+    margin-left: 15px;
+    margin-top: 15px;
+    overflow: scroll;
+}
+
+#chatroom::-webkit-scrollbar {
+    display: none;
+}
+
+#left-chatroom {
+    width: 40px;
+    height: 40px;
+    float: left;
+    background-color: #bbaf0d;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 1px 1px 3px #a0a0a0;
+}
+
+.profil {
+    color: white;
+    font-size: 24px;
+    margin-top: 6px;
+}
+
+.mini-active {
+    width: 5px;
+    height: 5px;
+    background-color: #06c881;
+    border-radius: 10px;
+    border: 1.5px solid white;
+    margin-left: 28px;
+    position: relative;
+    bottom: 2px;
+    background-attachment: fixed;
+}
+#right-chatroom {
+    max-width: 200px;
+    width: fit-content;
+    padding: 5px 10px 7px 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 1px 2px 7px #999;
+    margin-left: 48px;
+    font-size: 10pt;
+    color: #3f3f3f;
+    margin-bottom: 5px;
+    overflow-y: scroll;
+}
+
+#right-chatroom::-webkit-scrollbar {
+    width: 10px;
+}
+
+#textchat {
+    width: 170px;
+    height: 18px;
+    border: none;
+    border-radius: 3px;
+    font-size: 14px;
+    background-color: white;
+    background-repeat: no-repeat;
+    padding: 8px;
+    margin-top: 8px;
+    margin-left: 10px;
+    box-shadow: 0px 0px 3px #a0a0a0;
+    float: left;
+}
+
+#textchat:focus {
+    outline: 2px solid #fd6f13;
+}
+
+#chatform {
+    width: 273px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0px 3px 3px #c0c0c0;
+    margin-left: 12px;
+    margin-top: 31px;
+}
