@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebRTC Video Conference</title>
-    <link rel="icon" type="image/x-icon" href="../public/image-assets/logo-favicon.png">
-    <link rel="stylesheet" href="../public/css/style-frontpage.css">
+    <link rel="icon" type="image/x-icon" href="image-assets/logo-favicon.png">
+    <link rel="stylesheet" href="css/style-frontpage.css">
 </head>
+
 <body>
     <div id="container">
         <div id="form">
@@ -15,7 +17,7 @@
                     <br><br>
                     <h3 style="color: #fd6f13;">START MEETING</h3><br>
                     <p>Create room and meet people<br>
-                    <b>It's free</b>
+                        <b>It's free</b>
                     </p><br><br><br>
                     <input class="textfield nameIcon" id="startun" type="text" placeholder="Enter name ...">
                     <input class="textfield passIcon" id="startpc" type="password" placeholder="Create passcode ...">
@@ -27,7 +29,7 @@
                     <p style="color: #ffffff;">
                         Invited to a meeting?
                         <a href="#" onclick="flipToBack()"
-                        style="color: #ffffff; font-weight: bold; text-decoration: none;">
+                            style="color: #ffffff; font-weight: bold; text-decoration: none;">
                             Join now.
                         </a>
                     </p>
@@ -52,15 +54,15 @@
                     <p style="color: #ffffff;">
                         Create new meeting?
                         <a href="#" onclick="flipToFront()"
-                        style="color: #ffffff; font-weight: bold; text-decoration: none;">
-                        Start now.
-                    </a>
+                            style="color: #ffffff; font-weight: bold; text-decoration: none;">
+                            Start now.
+                        </a>
                     </p>
                 </div><!--End of bot-content-->
             </div><!--End of back-->
         </div><!--End of form-->
     </div><!--End of container-->
-    
+
     <script>
         function flipToBack() {
             document.getElementById("form").style.transform = 'rotateY(180deg)';
@@ -68,7 +70,14 @@
         function flipToFront() {
             document.getElementById("form").style.transform = 'rotateY(0deg)';
         }
+
+        function newRoom() {
+            var un = document.getElementById("startun").value;
+            var pc = document.getElementById("startpc").value;
+            location.assign("/newroom?username=" + un + "&passcode=" + pc);
+        }
     </script>
 
 </body>
+
 </html>
