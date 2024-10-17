@@ -76,6 +76,13 @@
             var pc = document.getElementById("startpc").value;
             location.assign("/newroom?username=" + un + "&passcode=" + pc);
         }
+
+        function joinRoom() {
+            var un = document.getElementById("joinun").value;
+            var inv = document.getElementById("joininv").value;
+            var pc = document.getElementById("joinpc").value;
+            location.assign("/joinroom?username=" + un + "&invitation=" + inv + "&passcode=" + pc);
+        }
     </script>
 
 </body>

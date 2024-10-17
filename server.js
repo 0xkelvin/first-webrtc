@@ -21,9 +21,49 @@ app.get('/newroom', (req, res) => {
     res.redirect(`/${roomId}`);
 });
 
+var unJ, inJ, pcJ;
+
+app.get("/joinroom", (req, res) => {
+    unJ = req.query.username;
+    inJ = req.query.invitation;
+    pcJ = req.query.passcode;
+    var log = fs.readFileSync("public/meeting-log.txt", "utf-8");
+    var findInvitation = log.indexOf(inJ + ":" + pcJ);
+    if (findInvitation !== -1) {
+        res.redirect(`/${inJ}`);
+        un = unJ;
+        pc = pcJ;
+    } else {
+        var findInvitation = log.indexOf(inJ);
+        if (findInvitation === -1) {
+            res.send('Invalid invitation. Please <a href="/">go back</a>');
+        } else {
+            var findPassCode = log.indexOf(inJ + ":" + pcJ);
+            if (findPassCode === -1) {
+                res.send('Invalid password. Please <a href="/">go back</a>');
+            }
+        }
+    }
+});
+
 app.get('/:room', (req, res) => {
     res.render("meeting-room", {
         roomId: req.params.room,
         username: un,
+    });
+});
+
+const { ExpressPeerServer } = require('peer');
+const peerServer = ExpressPeerServer(server, {
+    debug: true
+});
+
+app.use('/peerjs', peerServer);
+
+const io = require('socket.io')(server);
+io.on('connection', socket => {
+    socket.on('join-room', (roomId, peerId) => {
+        socket.join(roomId);
+        socket.to(roomId).emit('user-connected', peerId);
     });
 });
